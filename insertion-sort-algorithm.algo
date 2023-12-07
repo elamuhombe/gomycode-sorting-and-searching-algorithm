@@ -2,13 +2,15 @@ ALGORITHM insertion_sort
 VAR
 // Declare variables
     arr[] : ARRAY_OF_INTEGER // Declare variable "arr" as ARRAY_OF_INTEGER type
-    i, j,  :INTEGER // Declare variables "i" and "j" as integers
-    key : INTEGER
-    len: INTEGER
+    i, j, key, len  :INTEGER // Declare variables "i", "j", "key" and "len" as integers
+
 BEGIN
+    // Initialize the variable len
+    len := arr.length;
     // Read the array
     Read(arr);
 
+    // Iterate over the array starting from the second element (index 1)
     For (i := 1; i < len; i++){
     key := arr[i];
     j := i - 1;
