@@ -24,3 +24,6 @@ BEGIN
     // Place the key at its correct position
     arr[j + 1] := key;
 }
+
+// Display the array
+OUTPUT: array[];
