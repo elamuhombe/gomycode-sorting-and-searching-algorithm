@@ -1,0 +1,24 @@
+ALGORITHM insertion_sort
+VAR
+// Declare variables
+    arr[] : ARRAY_OF_INTEGER // Declare variable "arr" as ARRAY_OF_INTEGER type
+    i, j,  :INTEGER // Declare variables "i" and "j" as integers
+    key : INTEGER
+    len: INTEGER
+BEGIN
+    // Read the array
+    Read(arr);
+
+    For (i := 1; i < len; i++){
+    key := arr[i];
+    j := i - 1;
+
+    // Move elements that are greater than key to one position ahead of their current position
+    while (j >= 0 and arr[j] > key) {
+        arr[j + 1] := arr[j];
+        j := j - 1;
+    }
+    
+    // Place the key at its correct position
+    arr[j + 1] := key;
+}
